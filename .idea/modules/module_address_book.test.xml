@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_address_book.test" default="compile.module.address_book.test">
+  <dirname property="module.address_book.test.basedir" file="${ant.file.module_address_book.test}"/>
+  
+  <property name="module.jdk.home.address_book.test" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.address_book.test" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.address_book.test" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.address_book.test" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="address_book.test.output.dir" value="undefined"/>
+  <property name="address_book.test.testoutput.dir" value="${module.address_book.test.basedir}/../../build/classes/kotlin/test"/>
+  
+  <path id="address_book.test.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="address_book.test.module.production.classpath">
+    <path refid="${module.jdk.classpath.address_book.test}"/>
+    <pathelement location="${address_book.main.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-junit5:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.junit.jupiter:junit-jupiter-api:5.6.3.classpath"/>
+    <path refid="library.gradle:_org.junit.platform:junit-platform-commons:1.6.3.classpath"/>
+    <path refid="library.gradle:_org.apiguardian:apiguardian-api:1.1.0.classpath"/>
+    <path refid="library.gradle:_org.opentest4j:opentest4j:1.2.0.classpath"/>
+  </path>
+  
+  <path id="address_book.test.runtime.production.module.classpath">
+    <pathelement location="${address_book.main.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-junit5:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.junit.jupiter:junit-jupiter-api:5.6.3.classpath"/>
+    <path refid="library.gradle:_org.junit.platform:junit-platform-commons:1.6.3.classpath"/>
+    <path refid="library.gradle:_org.apiguardian:apiguardian-api:1.1.0.classpath"/>
+    <path refid="library.gradle:_org.opentest4j:opentest4j:1.2.0.classpath"/>
+    <path refid="library.gradle:_org.junit.jupiter:junit-jupiter-engine:5.6.3.classpath"/>
+    <path refid="library.gradle:_org.junit.platform:junit-platform-engine:1.6.3.classpath"/>
+  </path>
+  
+  <path id="address_book.test.module.classpath">
+    <path refid="${module.jdk.classpath.address_book.test}"/>
+    <pathelement location="${address_book.main.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-junit5:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.junit.jupiter:junit-jupiter-api:5.6.3.classpath"/>
+    <path refid="library.gradle:_org.junit.platform:junit-platform-commons:1.6.3.classpath"/>
+    <path refid="library.gradle:_org.apiguardian:apiguardian-api:1.1.0.classpath"/>
+    <path refid="library.gradle:_org.opentest4j:opentest4j:1.2.0.classpath"/>
+  </path>
+  
+  <path id="address_book.test.runtime.module.classpath">
+    <pathelement location="${address_book.test.testoutput.dir}"/>
+    <pathelement location="${address_book.main.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-junit5:1.8.0.classpath"/>
+    <path refid="library.gradle:_org.junit.jupiter:junit-jupiter-api:5.6.3.classpath"/>
+    <path refid="library.gradle:_org.junit.platform:junit-platform-commons:1.6.3.classpath"/>
+    <path refid="library.gradle:_org.apiguardian:apiguardian-api:1.1.0.classpath"/>
+    <path refid="library.gradle:_org.opentest4j:opentest4j:1.2.0.classpath"/>
+    <path refid="library.gradle:_org.junit.jupiter:junit-jupiter-engine:5.6.3.classpath"/>
+    <path refid="library.gradle:_org.junit.platform:junit-platform-engine:1.6.3.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.address_book.test">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.address_book.test">
+    <patternset refid="excluded.from.module.address_book.test"/>
+  </patternset>
+  
+  <path id="address_book.test.module.test.sourcepath">
+    <dirset dir="${module.address_book.test.basedir}/../../src/test">
+      <include name="kotlin"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.address_book.test" depends="compile.module.address_book.test.production,compile.module.address_book.test.tests" description="Compile module address_book.test"/>
+  
+  <target name="compile.module.address_book.test.production" depends="register.custom.compilers,compile.module.address_book.main" description="Compile module address_book.test; production classes"/>
+  
+  <target name="compile.module.address_book.test.tests" depends="register.custom.compilers,compile.module.address_book.test.production" description="compile module address_book.test; test classes" unless="skip.tests">
+    <mkdir dir="${address_book.test.testoutput.dir}"/>
+    <javac2 destdir="${address_book.test.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.address_book.test}/javac">
+      <compilerarg line="${compiler.args.address_book.test}"/>
+      <bootclasspath refid="address_book.test.module.bootclasspath"/>
+      <classpath refid="address_book.test.module.classpath"/>
+      <src refid="address_book.test.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.address_book.test"/>
+    </javac2>
+    
+    <copy todir="${address_book.test.testoutput.dir}">
+      <fileset dir="${module.address_book.test.basedir}/../../src/test/kotlin">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.address_book.test.basedir}/../../src/test/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.address_book.test" description="cleanup module">
+    <delete dir="${address_book.test.output.dir}"/>
+    <delete dir="${address_book.test.testoutput.dir}"/>
+  </target>
+</project>
